@@ -382,6 +382,14 @@ BlinkDiff.prototype = {
 			this._clip(this._imageA, this._imageB);
 
 			this._imageOutput = PNGImage.createImage(this._imageA.getWidth(), this._imageA.getHeight());
+			var color2 = {
+				red: 0,
+				green: 0,
+				blue: 0,
+				alpha: 0,
+				opacity: 1.0
+			};
+			this._imageOutput.fillRect(0,0,this._imageA.getWidth(), this._imageA.getHeight(), color2);
 
 			// Make a copy when not in debug mode
 			if (this._debug) {
@@ -509,6 +517,15 @@ BlinkDiff.prototype = {
 			this._clip(this._imageA, this._imageB);
 
 			this._imageOutput = PNGImage.createImage(this._imageA.getWidth(), this._imageA.getHeight());
+			var color2 = {
+				red: 0,
+				green: 0,
+				blue: 0,
+				alpha: 0,
+				opacity: 1.0
+			};
+
+			this._imageOutput.fillRect(0,0,this._imageA.getWidth(), this._imageA.getHeight(), color2);
 
 			// Make a copy when not in debug mode
 			if (this._debug) {
